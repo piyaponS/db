@@ -9,7 +9,7 @@ const todos = require("./routes/todosRoute");
 const users = require("./routes/userRoute");
 const cors = require("cors");
 const corsOptions = {
-  origin: "https://my-todos-two.vercel.app/",
+  origin: "https://my-todos-pied.vercel.app/",
   credentials: true,
   optionSuccessStatus: 200,
 };
