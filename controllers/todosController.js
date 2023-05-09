@@ -1,5 +1,4 @@
 const Todo = require("./../models/todoModel");
-const User = require("./../models/userModel");
 
 const getTodos = async (req, res) => {
   const todos = await Todo.find({ user: req.user.id });
