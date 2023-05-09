@@ -8,9 +8,15 @@ const password = process.env.DB_PASSWORD;
 const todos = require("./routes/todosRoute");
 const users = require("./routes/userRoute");
 const cors = require("cors");
+const corsOptions = {
+  origin: "https://my-todos-two.vercel.app/",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use("/api/todos", todos);
 app.use("/api/users", users);
 mongoose
