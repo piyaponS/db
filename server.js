@@ -16,6 +16,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/api/todos", todos);
 app.use("/api/users", users);
+
 mongoose
   .connect(
     `mongodb+srv://${user}:${password}@database.khjlk4g.mongodb.net/data?retryWrites=true&w=majority`
